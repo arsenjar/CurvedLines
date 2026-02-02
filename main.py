@@ -78,10 +78,7 @@ class LineDetector:
         return cv2.inRange(agx, lo, hi)
 
     def filter_slanted_lines(self, lines, min_angle_deg=25, max_angle_deg=75):
-        """
-        Оставляет только наклонные линии (не горизонтальные).
-        angle = atan2(dy, dx) в градусах, берем abs.
-        """
+
         if lines is None:
             return None
 
